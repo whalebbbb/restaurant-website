@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shanghai Pu Dong Kitchen — Authentic Chinese Food</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">Pu Dong <span>&</span> Kitchen</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#reservations">Reserve</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#reservations" class="nav-cta">Book a Table</a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" id="closeMenu">&times;</button>
+    <ul>
+      <li><a href="#about" onclick="closeMobile()">About</a></li>
+      <li><a href="#menu" onclick="closeMobile()">Menu</a></li>
+      <li><a href="#reservations" onclick="closeMobile()">Reserve</a></li>
+      <li><a href="#contact" onclick="closeMobile()">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tag">Est. 2018 · Singapore</p>
+      <h1>Where Fire Meets<br/><em>Flavour</em></h1>
+      <p class="hero-sub">A modern dining experience rooted in wood-fire craft,<br/>seasonal ingredients, and bold imagination.</p>
+      <div class="hero-btns">
+        <a href="#reservations" class="btn-primary">Reserve a Table</a>
+        <a href="#menu" class="btn-ghost">View Our Menu</a>
+      </div>
+    </div>
+    <div class="hero-scroll">Scroll ↓</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-img-wrap">
+        <div class="about-img img1"></div>
+        <div class="about-img img2"></div>
+        <div class="about-badge">10+ Years<br/><span>of Craft</span></div>
+      </div>
+      <div class="about-text">
+        <p class="section-label">Our Story</p>
+        <h2>Born from fire,<br/>built on <em>passion</em></h2>
+        <p>Ember & Oak was founded on a simple belief — that great food starts with honest ingredients and fearless technique. Our kitchen is anchored by a wood-fire hearth that imparts a depth of flavour no other cooking method can replicate.</p>
+        <p>Every dish on our menu is a dialogue between tradition and invention, crafted by our team of chefs who trained across three continents to bring you something truly unforgettable.</p>
+        <div class="about-stats">
+          <div class="stat"><span>12</span>Signature Dishes</div>
+          <div class="stat"><span>4</span>Private Dining Rooms</div>
+          <div class="stat"><span>500+</span>Wine Labels</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu">
+    <div class="section-header">
+      <p class="section-label">Culinary Offerings</p>
+      <h2>Our Signature <em>Menu</em></h2>
+    </div>
+    <div class="menu-tabs">
+      <button class="tab active" data-cat="all">All</button>
+      <button class="tab" data-cat="starters">Starters</button>
+      <button class="tab" data-cat="mains">Mains</button>
+      <button class="tab" data-cat="desserts">Desserts</button>
+      <button class="tab" data-cat="drinks">Drinks</button>
+    </div>
+    <div class="menu-grid" id="menuGrid">
+
+      <div class="menu-card" data-cat="starters">
+        <div class="menu-img" style="background:url('https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=600') center/cover"></div>
+        <div class="menu-info">
+          <div class="menu-top"><h3>Burrata & Heirloom Tomato</h3><span>$22</span></div>
+          <p>Creamy buffalo burrata, charred heirloom tomatoes, aged balsamic, micro basil</p>
+          <span class="menu-tag">Starters</span>
+        </div>
+      </div>
+
+      <div class="menu-card" data-cat="starters">
+        <div class="menu-img" style="background:url('https://images.unsplash.com/photo-1541014741259-de529411b96a?w=600') center/cover"></div>
+        <div class="menu-info">
+          <div class="menu-top"><h3>Wood-Fire Scallops</h3><span>$28</span></div>
+          <p>Pan-seared scallops, cauliflower purée, pancetta crisp, lemon foam</p>
+          <span class="menu-tag">Starters</span>
+        </div>
+      </div>
+
+      <div class="menu-card" data-cat="mains">
+        <div class="menu-img" style="background:url('https://images.unsplash.com/photo-1558030006-450675393462?w=600') center/cover"></div>
+        <div class="menu-info">
+          <div class="menu-top"><h3>Dry-Aged Ribeye</h3><span>$68</span></div>
+          <p>45-day dry-aged ribeye, bone marrow butter, truffle jus, roasted heritage carrots</p>
+          <span class="menu-tag">Mains</span>
+        </div>
+      </div>
+
+      <div class="menu-card" data-cat="mains">
+        <div class="menu-img" style="background:url('https://images.unsplash.com/photo-1519984388953-d2406bc725e1?w=600') center/cover"></div>
+        <div class="menu-info">
+          <div class="menu-top"><h3>Ora King Salmon</h3><span>$48</span></div>
+          <p>New Zealand king salmon, dashi beurre blanc, pickled cucumber, ikura</p>
+          <span class="menu-tag">Mains</span>
+        </div>
+      </div>
+
+      <div class="menu-card" data-cat="mains">
+        <div class="menu-img" style="background:url('https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600') center/cover"></div>
+        <div class="menu-info">
+          <div class="menu-top"><h3>Porcini Mushroom Risotto</h3><span>$38</span></div>
+          <p>Arborio rice, wild porcini, aged Parmigiano-Reggiano, chive oil</p>
+          <span class="menu-tag">Mains</span>
+        </div>
+      </div>
+
+      <div class="menu-card" data-cat="desserts">
+        <div class="menu-img" style="background:url('https://images.unsplash.com/photo-1551024601-bec78aea704b?w=600') center/cover"></div>
+        <div class="menu-info">
+          <div class="menu-top"><h3>Valrhona Chocolate Sphere</h3><span>$18</span></div>
+          <p>70% dark chocolate shell, salted caramel, passion fruit gel, praline crumble</p>
+          <span class="menu-tag">Desserts</span>
+        </div>
+      </div>
+
+      <div class="menu-card" data-cat="desserts">
+        <div class="menu-img" style="background:url('https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600') center/cover"></div>
+        <div class="menu-info">
+          <div class="menu-top"><h3>Yuzu Tart</h3><span>$16</span></div>
+          <p>Buttery shortcrust pastry, yuzu curd, Italian meringue, compressed strawberry</p>
+          <span class="menu-tag">Desserts</span>
+        </div>
+      </div>
+
+      <div class="menu-card" data-cat="drinks">
+        <div class="menu-img" style="background:url('https://images.unsplash.com/photo-1470338745628-171cf53de3a8?w=600') center/cover"></div>
+        <div class="menu-info">
+          <div class="menu-top"><h3>Ember Old Fashioned</h3><span>$22</span></div>
+          <p>Smoked bourbon, demerara, Angostura bitters, charred orange peel</p>
+          <span class="menu-tag">Drinks</span>
+        </div>
+      </div>
+
+      <div class="menu-card" data-cat="drinks">
+        <div class="menu-img" style="background:url('https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=600') center/cover"></div>
+        <div class="menu-info">
+          <div class="menu-top"><h3>Garden Spritz</h3><span>$16</span></div>
+          <p>Elderflower, cucumber, fresh mint, sparkling water, lime</p>
+          <span class="menu-tag">Drinks</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RESERVATIONS -->
+  <section id="reservations">
+    <div class="res-wrap">
+      <div class="res-left">
+        <p class="section-label">Dining Experience</p>
+        <h2>Make a <em>Reservation</em></h2>
+        <p>Join us for an unforgettable evening. We recommend booking at least 48 hours in advance for weekend seatings.</p>
+        <div class="res-info">
+          <div class="res-hours">
+            <p class="res-info-title">Opening Hours</p>
+            <p>Mon – Thu &nbsp;·&nbsp; 12pm – 10pm</p>
+            <p>Fri – Sat &nbsp;·&nbsp; 12pm – 11pm</p>
+            <p>Sunday &nbsp;·&nbsp; 11am – 9pm</p>
+          </div>
+        </div>
+      </div>
+      <div class="res-right">
+        <form id="resForm" onsubmit="submitReservation(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="Jane" required/>
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Doe" required/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="jane@email.com" required/>
+            </div>
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="tel" placeholder="+65 9123 4567" required/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Date</label>
+              <input type="date" required/>
+            </div>
+            <div class="form-group">
+              <label>Time</label>
+              <select required>
+                <option value="">Select time</option>
+                <option>12:00 PM</option>
+                <option>12:30 PM</option>
+                <option>1:00 PM</option>
+                <option>6:00 PM</option>
+                <option>6:30 PM</option>
+                <option>7:00 PM</option>
+                <option>7:30 PM</option>
+                <option>8:00 PM</option>
+                <option>8:30 PM</option>
+                <option>9:00 PM</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Party Size</label>
+            <select required>
+              <option value="">Number of guests</option>
+              <option>1 Guest</option>
+              <option>2 Guests</option>
+              <option>3 Guests</option>
+              <option>4 Guests</option>
+              <option>5 Guests</option>
+              <option>6 Guests</option>
+              <option>7+ Guests (Private Dining)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Special Requests</label>
+            <textarea placeholder="Allergies, celebrations, dietary requirements..." rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn-primary full">Confirm Reservation</button>
+        </form>
+        <div class="res-success" id="resSuccess">
+          <div class="success-icon">✓</div>
+          <h3>Reservation Confirmed!</h3>
+          <p>Thank you for booking with us. We'll send a confirmation to your email shortly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p class="section-label">Find Us</p>
+        <h2>Visit <em>Ember & Oak</em></h2>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="c-icon">📍</div>
+            <div>
+              <strong>Address</strong>
+              <p>271 Bukit Timah Rd, #B1-02<br/>Singapore 259708</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="c-icon">📞</div>
+            <div>
+              <strong>Phone</strong>
+              <p>+65 6732 8966</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="c-icon">✉️</div>
+            <div>
+              <strong>Email</strong>
+              <p>calebwukj@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="c-icon">🕐</div>
+            <div>
+              <strong>Hours</strong>
+              <p>Tue-Sun 1130am–230pm<br/>Tue–Fri 530pm–9pm<br/>Sat-Sun 6pm–9pm</p>
+            </div>
+          </div>
+        </div>
+        <div class="socials">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">TikTok</a>
+        </div>
+      </div>
+      <div class="map-placeholder">
+        <iframe
+          src="https://www.google.com/maps/place/Shanghai+Pu+Dong+Kitchen/@1.3165013,103.8328087,985m/data=!3m1!1e3!4m15!1m8!3m7!1s0x31da19ef999c5e81:0x166e6f280e29960d!2sShanghai+Pu+Dong+Kitchen!8m2!3d1.3165013!4d103.8353836!10e1!16s%2Fg%2F1tgq4537!3m5!1s0x31da19ef999c5e81:0x166e6f280e29960d!8m2!3d1.3165013!4d103.8353836!16s%2Fg%2F1tgq4537?entry=ttu&g_ep=EgoyMDI2MDQwMS4wIKXMDSoASAFQAw%3D%3D"
+          width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Ember <span>&</span> Oak</div>
+      <p>© 2025 Shanghai Pu Dong Kitchen All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#reservations">Reservations</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
